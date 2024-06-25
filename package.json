@@ -7,10 +7,7 @@
     "cy:open": "cypress open",
     "cy:run": "cypress run",
     "cy:info": "cypress info",
-    "cy:start ci": "cypress start ci",
-    "chrome-execution": "npx cypress run cypress/e2e/**/*.js --browser chrome",
-    "start:app:server": "node app_server.js --port 7074",
-    "start:auth:server": "node auth_server.js --port 7075"
+    "cy:start ci": "cypress start ci"
   },
   "keywords": [],
   "author": "chris thomas",

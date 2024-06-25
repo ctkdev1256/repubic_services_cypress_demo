@@ -27,10 +27,11 @@ phases:
       - export COMMIT_INFO_AUTHOR="$(git log -1 --pretty=%an)"
       - export COMMIT_INFO_SHA="$(git log -1 --pretty=%H)"
       - export COMMIT_INFO_REMOTE="$(git config --get remote.origin.url)"
+      - dnf install -y xorg-x11-server-Xvfb gtk3-devel nss alsa-lib
       - npm ci
   pre_build:
     commands:
       - npm run cy:info
   build:
     commands:
-      - npx cypress run --spec "cypress/e2e/republic_services_signup_account.cy.js" --record --parallel --headed
+      - npx cypress run --spec "cypress/e2e/republic_services_signup_account.cy.js" --record --headed
