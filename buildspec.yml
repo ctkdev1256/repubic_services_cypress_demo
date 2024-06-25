@@ -16,7 +16,7 @@ batch:
 phases:
   install:
     runtime-versions:
-      nodejs: 20.12.2
+      nodejs: 20
     commands:
       # Set COMMIT_INFO variables to send Git specifics to Cypress Cloud when recording
       # https://docs.cypress.io/guides/continuous-integration/introduction#Git-information
