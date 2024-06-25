@@ -34,4 +34,4 @@ phases:
   build:
     commands:
       - npm run start:ci
-      - npx cypress run 
+      - npx cypress run --spec "cypress/e2e/republic_services_signup_account.cy.js" --record --parallel --headed
