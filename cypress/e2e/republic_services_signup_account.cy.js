@@ -1,18 +1,14 @@
-// npm package to mock data(email, name....)
-// import { faker } from "@faker-js/faker";
+// npm nanoid package to mock data(email, name....)
 import { nanoid } from 'nanoid/non-secure'
-
 
 describe("Create account on Republic Services site", () => {
 
-
-
     it("Go to RP site. create account", () => {
 
+        // variable to pass into type method
         const firstName = nanoid(7)
         const lastName = nanoid(7)
         const email = nanoid(5)
-
 
         // go to url
         cy.visit("/account");
