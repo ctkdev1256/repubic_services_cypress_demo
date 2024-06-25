@@ -1,7 +1,7 @@
 {
   "name": "republicservices_cypress_ci_cd_demo",
   "version": "1.0.0",
-  "description": "",
+  "description": "short demo:",
   "main": "index.js",
   "scripts": {
     "cy:open": "cypress open",
@@ -15,11 +15,10 @@
   "author": "chris thomas",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^12.17.2",
+    "cypress": "^13.12.0",
     "nanoid": "^5.0.7"
   },
   "dependencies": {
-    "ci": "^2.3.0",
     "random-name": "^0.1.2",
     "unique-names-generator": "^4.7.1"
   }
