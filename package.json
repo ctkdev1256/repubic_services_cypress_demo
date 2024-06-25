@@ -7,7 +7,9 @@
     "cy:open": "cypress open",
     "cy:run": "cypress run",
     "cy:info": "cypress info",
-    "chrome-execution": "npx cypress run cypress/e2e/**/*.js --browser chrome"
+    "chrome-execution": "npx cypress run cypress/e2e/**/*.js --browser chrome",
+    "start:app:server": "node app_server.js --port 7074",
+    "start:auth:server": "node auth_server.js --port 7075"
   },
   "keywords": [],
   "author": "chris thomas",
@@ -17,6 +19,7 @@
     "nanoid": "^5.0.7"
   },
   "dependencies": {
+    "ci": "^2.3.0",
     "random-name": "^0.1.2",
     "unique-names-generator": "^4.7.1"
   }
