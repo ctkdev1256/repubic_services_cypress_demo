@@ -7,7 +7,6 @@
     "cy:open": "cypress open",
     "cy:run": "cypress run",
     "cy:info": "cypress info",
-    "cy:verify": "cypress verify",
     "chrome-execution": "npx cypress run cypress/e2e/**/*.js --browser chrome"
   },
   "keywords": [],
