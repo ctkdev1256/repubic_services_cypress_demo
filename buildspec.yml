@@ -37,6 +37,4 @@ phases:
       # - npm run start:ci &
       # - npx cypress run --record
       - npm start:ci &
-      - npx cypress run --record --parallel --browser $CY_BROWSER --ci-build-id
-        $CODEBUILD_INITIATOR --group "$CY_GROUP" --spec "$CY_SPEC" --config
-        "$CY_CONFIG"
+      - npx cypress run --record 
