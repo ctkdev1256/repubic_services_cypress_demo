@@ -1,6 +1,18 @@
 ## buildspec.yml
 version: 0.2
 
+## AWS CodeBuild Batch configuration
+## https://docs.aws.amazon.com/codebuild/latest/userguide/batch-build-buildspec.html
+## Define build to run using the
+## "cypress/browsers:node-20.9.0-chrome-118.0.5993.88-1-ff-118.0.2-edge-118.0.2088.46-1" image
+## from the Cypress Amazon ECR Public Gallery
+batch:
+  fast-fail: false
+  build-list:
+    - identifier: cypress-e2e-tests
+      env:
+        image: public.ecr.aws/cypress-io/cypress/browsers:node-20.9.0-chrome-118.0.5993.88-1-ff-118.0.2-edge-118.0.2088.46-1
+
 phases:
   install:
     runtime-versions:
@@ -16,11 +28,12 @@ phases:
       - export COMMIT_INFO_SHA="$(git log -1 --pretty=%H)"
       - export COMMIT_INFO_REMOTE="$(git config --get remote.origin.url)"
       - dnf install -y xorg-x11-server-Xvfb gtk3-devel nss alsa-lib
-      - npm install
+      - npm ci
   pre_build:
     commands:
       - npm run cy:verify
       - npm run cy:info
   build:
     commands:
-      - npx run cy:cloud
+      - npm run start:ci &
+      - npx cypress run --record --browser chrome
