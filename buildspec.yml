@@ -27,11 +27,19 @@ phases:
       - export COMMIT_INFO_AUTHOR="$(git log -1 --pretty=%an)"
       - export COMMIT_INFO_SHA="$(git log -1 --pretty=%H)"
       - export COMMIT_INFO_REMOTE="$(git config --get remote.origin.url)"
+      - CY_GROUP=$(echo $CY_GROUP_SPEC | cut -d'|' -f1)
+      - CY_BROWSER=$(echo $CY_GROUP_SPEC | cut -d'|' -f2)
+      - CY_SPEC=$(echo $CY_GROUP_SPEC | cut -d'|' -f3)
+      - CY_CONFIG=$(echo $CY_GROUP_SPEC | cut -d'|' -f4)
       - npm ci
   pre_build:
     commands:
       - npm run cy:info
   build:
     commands:
-      - npm run start:ci &
-      - npx cypress run --record --browser chrome
+      # - npm run start:ci &
+      # - npx cypress run --record
+      - npm start:ci &
+      - npx cypress run --record --parallel --browser $CY_BROWSER --ci-build-id
+        $CODEBUILD_INITIATOR --group "$CY_GROUP" --spec "$CY_SPEC" --config
+        "$CY_CONFIG"

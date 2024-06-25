@@ -8,17 +8,20 @@
     "cy:run": "cypress run",
     "cy:info": "cypress info",
     "chrome-execution": "npx cypress run cypress/e2e/**/*.js --browser chrome --headless",
-    "edge-execution": "npx cypress run cypress/e2e/**/*.js --browser chrome --headless",
-    "cy:parallel": "cypress run --record -t 1 -d 'cypress/e2e/republic_services_signup_account/*.js'",
-    "start:app:server": "node app_server.js --port 7074",
-    "start:auth:server": "node auth_server.js --port 7075"
+    "edge-execution": "npx cypress run cypress/e2e/**/*.js --browser edge --headless",
+    "cy:parallel": "cypress run --record -t 1 -d 'cypress/e2e/republic_services_signup_account/*.js'"
+    // "start:app:server": "node app_server.js --port 7074",
+    // "start:auth:server": "node auth_server.js --port 7075"
   },
   "keywords": [],
   "author": "chris thomas",
   "license": "ISC",
   "devDependencies": {
-    "@faker-js/faker": "^8.4.1",
-    "@tsconfig/cypress": "^1.0.2",
-    "cypress": "^12.17.2"
+    "cypress": "^12.17.2",
+    "nanoid": "^5.0.7"
+  },
+  "dependencies": {
+    "random-name": "^0.1.2",
+    "unique-names-generator": "^4.7.1"
   }
 }
