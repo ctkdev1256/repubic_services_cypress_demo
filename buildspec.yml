@@ -37,4 +37,4 @@ phases:
       # - npm run start:ci &
       # - npx cypress run --record
       - npm start:ci &
-      - npx cypress run --record 
+      - npx cypress run
