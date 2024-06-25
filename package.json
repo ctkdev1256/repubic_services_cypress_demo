@@ -9,7 +9,7 @@
     "cy:info": "cypress info",
     "chrome-execution": "nox cypress run cypress/e2e/**/*.js --browser chrome --headed",
     "edge-execution": "nox cypress run cypress/e2e/**/*.js --browser chrome --headed",
-    "cy:parallel": "cypress-parallel -s cy:run -t 3 -d 'cypress/e2e/parallel-tests/*.js'",
+    "cy:parallel": "cypress-parallel -s cy:run -t 3 -d 'cypress/e2e/republic_services_signup_account/*.js'",
     "start:app:server": "node app_server.js --port 7074",
     "start:auth:server": "node auth_server.js --port 7075"
   },
