@@ -33,7 +33,4 @@ phases:
       - npm run cy:info
   build:
     commands:
-      # - npm run start:ci &
-      # - npx cypress run --record
-      - npm start:ci &
-      - npx cypress run 
+      - npx cypress run --record --browser chrome
