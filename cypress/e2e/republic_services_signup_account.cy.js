@@ -14,8 +14,8 @@ describe("Create account on Republic Services site", () => {
         cy.visit("/account");
 
         /*
-                use shadow command because there is a shadow-rom to work to enable elements 
-            */
+            use shadow command because there is a shadow-rom to work to enable elements 
+        */
 
         // click on account tab on the page
         cy.get("classic-content-wrapper")
@@ -31,14 +31,14 @@ describe("Create account on Republic Services site", () => {
             .find(".h3.text-center.pb-3.singup-heading")
             .should("be.visible");
 
-        // assert if it is present,use faker-js to mock a fake first name on the input field box, then type into the box
+        // assert if it is present,use nanoid to mock a fake first name on the input field box, then type into the box
         cy.get("classic-content-wrapper")
             .shadow()
             .find("#signupform-firstName")
             .should("be.visible")
             .type(firstName, { force: true });
 
-        //  assert if it is present, use faker-js to mock a fake last name on the input field box, then type into the box
+        //  assert if it is present, use nanoid to mock a fake last name on the input field box, then type into the box
         cy.get("classic-content-wrapper")
             .shadow()
             .find("#signupform-lastName")
@@ -52,7 +52,7 @@ describe("Create account on Republic Services site", () => {
             .should("be.visible")
             .type(email + "145@yahoo.com");
 
-        // use faker-js to mock a fake email on the emal input field box, then type
+        // use faker-js to mock a nanoid email on the email input field box, then type
         cy.get("classic-content-wrapper")
             .shadow()
             .find("#signupform-password")
