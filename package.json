@@ -8,10 +8,6 @@
     "cy:run": "cypress run",
     "cy:info": "cypress info",
     "chrome-execution": "npx cypress run cypress/e2e/**/*.js --browser chrome"
-    // "edge-execution": "npx cypress run cypress/e2e/**/*.js --browser edge --headless",
-    // "cy:parallel": "cypress r -t 1 -d 'cypress/e2e/republic_services_signup_account/*.js'"
-    // "start:app:server": "node app_server.js --port 7074",
-    // "start:auth:server": "node auth_server.js --port 7075"
   },
   "keywords": [],
   "author": "chris thomas",
