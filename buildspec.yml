@@ -27,11 +27,11 @@ phases:
       - export COMMIT_INFO_AUTHOR="$(git log -1 --pretty=%an)"
       - export COMMIT_INFO_SHA="$(git log -1 --pretty=%H)"
       - export COMMIT_INFO_REMOTE="$(git config --get remote.origin.url)"
-      - dnf install -y xorg-x11-server-Xvfb gtk3-devel nss alsa-lib
       - npm ci
   pre_build:
     commands:
       - npm run cy:info
+      - npm run cy:verify
   build:
     commands:
       - npm run start:ci &
