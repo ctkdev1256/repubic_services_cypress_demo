@@ -6,6 +6,7 @@
   "scripts": {
     "cy:open": "cypress open",
     "cy:run": "cypress run",
+    "cy:verify": "cypress verify",
     "cy:info": "cypress info",
     "cy:start ci": "cypress start ci"
   },
