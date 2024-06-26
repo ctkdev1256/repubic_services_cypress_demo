@@ -5,7 +5,6 @@ module.exports = defineConfig({
   viewportHeight: 860,
   viewportWidth: 1224,
   chromeWebSecurity: false,
-  video: true,
   
   e2e: {
     baseUrl: 'https://www.republicservices.com',
