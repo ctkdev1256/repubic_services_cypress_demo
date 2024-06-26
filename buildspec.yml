@@ -35,4 +35,4 @@ phases:
       - npm run cy:verify
   build:
     commands:
-      - npx cypress run --browser chrome 
+      - npx cypress run  
